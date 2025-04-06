@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Roadmap - Career Development
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Meet Your Mentors</h1>
+    <br>
+    <div class="mentor-section">
+
+        <!-- Mentor 2 -->
+        <div class="mentor-card">
+            <img src="{{ url_for('static', filename='images/hod.jpeg') }}" alt="Dr. Kompalli Udaya Sri" />
+            <h3>Dr. Kompalli Udaya Sri</h3>
+            <h4>Head of Department - Data Science and AI</h4>
+            <p>
+                Dr. Udaya Sri is the Head of Data Science and AI, with degrees in M.B.A., M.Sc.(IT), M.Tech(CSE), MA (Astrology), and a Ph.D. She has over 7 journal publications and has presented at over 36 conferences, including 18 international events.
+            </p>
+            <p>
+                She has organized 8 workshops and earned 5 NPTEL certifications. Dr. Udaya Sri is committed to equipping students with cutting-edge knowledge in Data Science and AI.
+            </p>
+        </div>
+
+        <!-- Mentor 1 -->
+        <div class="mentor-card">
+            <img src="{{ url_for('static', filename='images/tcp.jpeg') }}" alt="Sridhar Kavuri" />
+            <h3>Sridhar Kavuri</h3>
+            <h4>Training & Placement Officer</h4>
+            <p>
+                Sridhar Kavuri has over 17 years of experience in education and placement management. He leads placement activities at P.B. Siddhartha College and has expertise in curriculum development, data science, and big data analytics.
+            </p>
+            <p>
+                Sridhar is an awardee of the Ambitions Award for Educational Excellence 2021, and he has a patent in AI-based crowd detection.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .mentor-section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .mentor-card {
+        flex: 1;
+        max-width: 48%;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mentor-card img {
+        width: 150px;  /* Fixed width */
+        height: 150px; /* Fixed height */
+        border-radius: 50%;  /* Round image */
+        object-fit: cover;  /* Cover the circle */
+        margin-bottom: 15px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .mentor-card h3 {
+        margin: 10px 0;
+    }
+
+    .mentor-card h4 {
+        margin: 5px 0;
+        color: #555;
+        font-weight: 400;
+    }
+
+    .mentor-card p {
+        text-align: left;
+        margin: 10px 0;
+        line-height: 1.5;
+    }
+
+    .mentor-card ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    /* Hover effects */
+    .mentor-card:hover {
+        transform: scale(1.05);  /* Slight zoom on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Larger shadow on hover */
+    }
+
+    .mentor-card:hover img {
+        transform: scale(1.1);  /* Zoom in the image slightly */
+    }
+
+    /* Fade-in animation on page load */
+    .mentor-card {
+        opacity: 0;
+        animation: fadeInUp 0.6s forwards;
+    }
+
+    .mentor-card:nth-child(even) {
+        animation-delay: 0.3s; /* Delay for alternate cards */
+    }
+
+    .mentor-card:nth-child(odd) {
+        animation-delay: 0.5s; /* Delay for alternate cards */
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+</style>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Team InnoUdayVoyagers
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center mb-5" style="font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: bold;">Team InnoUdayVoyagers</h1>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Abdul Faheem -->
+        <div class="col">
+            <div class="card h-100 text-center shadow">
+                <img src="{{ url_for('static', filename='images/abdul.jpeg') }}" class="card-img-top rounded-circle mx-auto mt-3" alt="Abdul Faheem" style="width: 150px; height: 150px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Abdul Faheem</h5>
+                    <h6 class="text-primary">Team Leader</h6>
+                    <p class="card-text"><strong>Role:</strong> Full Stack Developer</p>
+                    <p class="card-text">I handled both the frontend and backend development, integrating all the components into a cohesive system. My role was to ensure smooth interaction between services, combining each part into a fully functional solution.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Gandham Mani Saketh -->
+        <div class="col">
+            <div class="card h-100 text-center shadow">
+                <img src="{{ url_for('static', filename='images/saketh.jpeg') }}" class="card-img-top rounded-circle mx-auto mt-3" alt="Gandham Mani Saketh" style="width: 150px; height: 150px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Gandham Mani Saketh</h5>
+                    <p class="card-text"><strong>Role:</strong> LLM Fine-tuning & Chatbot Development</p>
+                    <p class="card-text">I developed the Leo AI chatbot, fine-tuned the Gemini LLM, and worked on the notification system and dynamic roadmap generation, ensuring students received timely guidance and personalized career advice.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Gajula Yamini Naga Sai Aishwarya -->
+        <div class="col">
+            <div class="card h-100 text-center shadow">
+                <img src="{{ url_for('static', filename='images/aishu.jpg') }}" class="card-img-top rounded-circle mx-auto mt-3" alt="Gajula Yamini Naga Sai Aishwarya" style="width: 150px; height: 150px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Gajula Yamini Naga Sai Aishwarya</h5>
+                    <p class="card-text"><strong>Role:</strong> Data Monitoring & AI-driven Assistance</p>
+                    <p class="card-text">I focused on monitoring student progress and providing AI-driven assistance outside of the chatbot. My work involved analyzing student data and ensuring they receive personalized feedback and suggestions for improvement.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Morla Lakshmi Prasanna -->
+        <div class="col">
+            <div class="card h-100 text-center shadow">
+                <img src="{{ url_for('static', filename='images/prasana.jpeg') }}" class="card-img-top rounded-circle mx-auto mt-3" alt="Morla Lakshmi Prasanna" style="width: 150px; height: 150px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Morla Lakshmi Prasanna</h5>
+                    <p class="card-text"><strong>Role:</strong> Course Recommendation System Developer</p>
+                    <p class="card-text">I focused on developing the course recommendation system, providing students with tailored learning suggestions to enhance their educational journey. My work aimed at recommending courses that align with the student's progress and career goals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Font Style -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        color: #333;
+    }
+    .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+    }
+    .text-primary {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        color: #007bff !important;
+    }
+    .card-img-top {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-img-top:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+</style>
+{% endblock %}
