@@ -22,8 +22,7 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/PBSC-Ignite-db"  # Update w
 mongo = PyMongo(app)
 
 # Configure Gemini API'
-GENMI_API_KEY = "AIzaSyD9oeJ_5I26O4SX4v2KjNwNtMElj-dYvBM"
-#GENMI_API_KEY = "AIzaSyBVL73UIy3dhEyP3OC4gCgMOQFgX2v6G8E"  # Replace with your Gemini API Key
+GENMI_API_KEY = "Your-API-Key"
 genai.configure(api_key=GENMI_API_KEY)
 
 # Set a secret key for session management and flashing messages
@@ -115,8 +114,7 @@ def news_article():
         # API Request
         url = "https://medium16.p.rapidapi.com/search/stories"
         headers = {
-            #"x-rapidapi-key": "2e1d6d9429msh47bb7452e4880d6p19db56jsn447674e01b3c",
-            "x-rapidapi-key": "a9d206afa9msh1a3192fce899677p15fbaajsn6ccdd156cb0e",
+            "x-rapidapi-key": "Your-API-Key",
             "x-rapidapi-host": "medium16.p.rapidapi.com",
         }
         querystring = {"q": query, "limit": "10", "page": str(page)}
@@ -272,10 +270,7 @@ def fetch_and_save_linkedin_profile(linkedin_url=None):
     querystring = {"url":linkedin_url}
 
     headers = {
-        #"x-rapidapi-key": "2e1d6d9429msh47bb7452e4880d6p19db56jsn447674e01b3c",
-        #"x-rapidapi-key": "0e567dff3cmsh89a7c64ae4f064cp1597cfjsn80a01991ebba",  # Replace with your API key
-        #"x-rapidapi-key": "f7bfaf31eemsh40d3e4d40afd75dp1ab6c7jsn771476f0b98f",        
-        'x-rapidapi-key': "9ac9ae8123mshf8493c7d86c01bap1d40a5jsn33fb267e423a",
+        'x-rapidapi-key': "Your-API-Key",
         "x-rapidapi-host": "linkedin-data-api.p.rapidapi.com"
     }    
 
@@ -406,7 +401,7 @@ def career_coach():
 
 def get_roadmap_from_groq(topic):
 
-    os.environ["GROQ_API_KEY"] = "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"
+    os.environ["GROQ_API_KEY"] = "Your-API-Key"
     client = Groq()
     
     prompt = f"""Create a structured learning roadmap for {topic} in this exact JSON format:
@@ -484,7 +479,7 @@ def generate_plan(phase_id):
         roadmap = json.loads(user["road_map"])
         phase = roadmap["phases"][int(phase_id)]
         
-        os.environ["GROQ_API_KEY"] = "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"
+        os.environ["GROQ_API_KEY"] = "Your-API-Key"
         client = Groq()
         prompt = f"""Generate learning plan for {phase['name']} phase with skills: {', '.join(phase['skills'])}. Return pure JSON:
                 {{
@@ -762,8 +757,7 @@ def home():
         page = 0  # Start from page 0 for simplicity
         url = "https://medium16.p.rapidapi.com/search/stories"
         headers = {
-            #"x-rapidapi-key": "2e1d6d9429msh47bb7452e4880d6p19db56jsn447674e01b3c",
-            "x-rapidapi-key": "a9d206afa9msh1a3192fce899677p15fbaajsn6ccdd156cb0e",
+            "x-rapidapi-key": "Your-API-Key",
             "x-rapidapi-host": "medium16.p.rapidapi.com",
         }
         querystring = {"q": query, "limit": "5", "page": str(page)}  # Limit articles for the carousel
